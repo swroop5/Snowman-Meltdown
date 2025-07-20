@@ -29,7 +29,7 @@ def main():
 
     while turns > 0:
         failed = len(word)
-        for i in range(len(snowman_list) - turns, len(snowman_list)):
+        for i in range(turns):
             print(snowman_list[i])
         print()
 
@@ -55,7 +55,7 @@ def main():
         if old_guess != guess:
             if guess not in word:
                 turns -= 1
-                print("You have " + str(turns) + " guesses left")
+                print("You have " + str(turns) + " guesses left\n")
                 if turns == 0:
                     print(f"\nGame Over! The word was: {word}")
 
